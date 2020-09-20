@@ -22,7 +22,7 @@
     
 
 
-    <title>HUGO &#43; Github 安裝教學 | 實驗室</title>
+    <title>HUGO &#43; Github 安裝教學 | Ken Site</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -33,7 +33,7 @@
     <meta property="og:title" content="HUGO &#43; Github 安裝教學" />
 <meta property="og:description" content="Guide to emoji usage in Hugo" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://example.org/post/hugo-github-guide/" />
+<meta property="og:url" content="http://yen429.github.org/post/hugo-github-guide/" />
 <meta property="article:published_time" content="2020-09-20T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-09-20T00:00:00+00:00" />
 
@@ -67,28 +67,28 @@
     "isFamilyFriendly": "true",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "http:\/\/example.org\/post\/hugo-github-guide\/"
+        "@id": "http:\/\/yen429.github.org\/post\/hugo-github-guide\/"
     },
     "author" : [
     ],
-    "copyrightHolder" : "實驗室",
+    "copyrightHolder" : "Ken Site",
     "copyrightYear" : "2020",
     "dateCreated": "2020-09-20T00:00:00.00Z",
     "datePublished": "2020-09-20T00:00:00.00Z",
     "dateModified": "2020-09-20T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
-        "name": "實驗室",
-        "url": "http://example.org/",
+        "name": "Ken Site",
+        "url": "http://yen429.github.org/",
         "logo": {
             "@type": "ImageObject",
-            "url": "http:\/\/example.org\/brand.svg",
+            "url": "http:\/\/yen429.github.org\/brand.svg",
             "width":"32",
             "height":"32"
         }
     },
-    "url" : "http:\/\/example.org\/post\/hugo-github-guide\/",
-    "wordCount" : "11",
+    "url" : "http:\/\/yen429.github.org\/post\/hugo-github-guide\/",
+    "wordCount" : "210",
     "genre" : [ "技術分享" ]
 }
 </script>
@@ -102,10 +102,10 @@
     <div class="wrapper">
         <header class="gblog-header">
     <div class="container flex align-center justify-center">
-        <a class="gblog-header__link" rel="me" href="http://example.org/">
+        <a class="gblog-header__link" rel="me" href="http://yen429.github.org/">
             <span class="gblog-brand flex align-center justify-center">
-                <img class="gblog-brand__img" title="Branding of 實驗室" src="/brand.svg" alt="實驗室" width=60 height=60>
-                實驗室
+                <img class="gblog-brand__img" title="Branding of Ken Site" src="/brand.svg" alt="Ken Site" width=60 height=60>
+                Ken Site
             </span>
             
         </a>
@@ -121,54 +121,6 @@
         </label>
     </div>
     <ul class="gblog-nav__list container flex flex-wrap justify-center menu-content">
-        
-        
-        
-        <li>
-            <a class="gblog-nav__entry " href="/tags/css/">css</a>
-        </li>
-        
-        
-        
-        <li>
-            <a class="gblog-nav__entry " href="/tags/emoji111/">emoji111</a>
-        </li>
-        
-        
-        
-        <li>
-            <a class="gblog-nav__entry " href="/tags/html/">html</a>
-        </li>
-        
-        
-        
-        <li>
-            <a class="gblog-nav__entry " href="/tags/index/">index</a>
-        </li>
-        
-        
-        
-        <li>
-            <a class="gblog-nav__entry " href="/tags/markdown/">markdown</a>
-        </li>
-        
-        
-        
-        <li>
-            <a class="gblog-nav__entry " href="/tags/privacy/">privacy</a>
-        </li>
-        
-        
-        
-        <li>
-            <a class="gblog-nav__entry " href="/tags/shortcodes/">shortcodes</a>
-        </li>
-        
-        
-        
-        <li>
-            <a class="gblog-nav__entry " href="/tags/text/">text</a>
-        </li>
         
         
         
@@ -201,12 +153,137 @@
 
 
 <p>這個網站是使用HUGO生成的靜態網頁，並搭配Geekblog的佈景主題，最後再架設到Github上，過程其實很簡單，我的第一篇文章就來記錄這整個過程吧！</p>
+<p>這篇教學主要是以Windows為主，其他作業系統的安裝流程會不太一樣，也都可以從網路上找到相關的說明。</p>
+<div class="gblog-post__anchorwrap"><h2 id="install-chocolatey">Install Chocolatey<a data-clipboard-text="http://yen429.github.org/post/hugo-github-guide/#install-chocolatey" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor Install Chocolatey" href="#install-chocolatey"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
+<p>在Hugo網站上針對Windows提供Chocolatey和Scoop這兩種套件管理程式來安裝，我主要採用的Chocolatey：</p>
 <ol>
-<li>Install Hugo</li>
-<li>Install theme</li>
-<li>HOST by github</li>
-<li>Post new page</li>
+<li>可以參考 <a href="https://chocolatey.org/install">Chocolatey</a> 的安裝說明</li>
+<li>在搜尋列上打PowerShell,並以系統管理員身分去執行Window PowerShell</li>
+<li>PowerShell裡面去執行下面command
+<blockquote>
+<p>Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&lsquo;<a href="https://chocolatey.org/install.ps1'">https://chocolatey.org/install.ps1'</a>))</p>
+</blockquote>
+</li>
+<li>等待一段時間後，如沒有出現錯誤訊息，執行下列commad確認是否安裝成功
+<blockquote>
+<p>choco</p>
+</blockquote>
+</li>
+<li>出現下列訊息表示安裝成功
+<blockquote>
+<p>Chocolatey v0.10.15</p>
+</blockquote>
+</li>
 </ol>
+<div class="gblog-post__anchorwrap"><h2 id="install-hugo">Install Hugo<a data-clipboard-text="http://yen429.github.org/post/hugo-github-guide/#install-hugo" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor Install Hugo" href="#install-hugo"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
+<p>安裝好Chocolatey後，要再安裝Hugo就簡單很多：</p>
+<ol>
+<li>執行下列Command來安裝Hugo
+<blockquote>
+<p>choco install hugo -confirm</p>
+</blockquote>
+</li>
+<li>安裝完成後，便可利用Hugo來建立網站
+<blockquote>
+<p>hugo new site website-hugo</p>
+</blockquote>
+</li>
+</ol>
+<div class="gblog-post__anchorwrap"><h2 id="install-geekblog-theme">Install Geekblog Theme<a data-clipboard-text="http://yen429.github.org/post/hugo-github-guide/#install-geekblog-theme" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor Install Geekblog Theme" href="#install-geekblog-theme"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
+<p>建立好Hugo網站後，接下來就是要套用Theme，我選擇的是Geekblog：</p>
+<ol>
+<li>
+<p>下載 <a href="https://hugo-geekblog.geekdocs.de/posts/getting-started/#option-1-download-pre-build-release-bundle">Greekbolg pre-build release bundle</a></p>
+</li>
+<li>
+<p>解壓縮後將layouts/和static/這兩個資料夾覆蓋到hugo所產生的website-hugo/資料夾內</p>
+</li>
+<li>
+<p>修改website-hugo/config.toml
+<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">baseURL</span> <span class="p">=</span> <span class="s2">&#34;http://localhost&#34;</span>
+<span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;Geekblog&#34;</span>
+<span class="nx">theme</span> <span class="p">=</span> <span class="s2">&#34;hugo-geekblog&#34;</span>
+
+<span class="c"># Geekblog required configuration</span>
+<span class="nx">pygmentsUseClasses</span> <span class="p">=</span> <span class="kc">true</span>
+<span class="nx">pygmentsCodeFences</span> <span class="p">=</span> <span class="kc">true</span>
+<span class="nx">disablePathToLower</span> <span class="p">=</span> <span class="kc">true</span>
+
+<span class="c"># Needed for mermaid shortcodes</span>
+<span class="p">[</span><span class="nx">markup</span><span class="p">]</span>
+  <span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">goldmark</span><span class="p">.</span><span class="nx">renderer</span><span class="p">]</span>
+    <span class="nx">unsafe</span> <span class="p">=</span> <span class="kc">true</span>
+  <span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">tableOfContents</span><span class="p">]</span>
+    <span class="nx">startLevel</span> <span class="p">=</span> <span class="mi">1</span>
+    <span class="nx">endLevel</span> <span class="p">=</span> <span class="mi">9</span>
+
+<span class="p">[</span><span class="nx">taxonomies</span><span class="p">]</span>
+  <span class="nx">author</span> <span class="p">=</span> <span class="s2">&#34;authors&#34;</span>
+  <span class="nx">tag</span> <span class="p">=</span> <span class="s2">&#34;tags&#34;</span>
+  <span class="nx">series</span> <span class="p">=</span> <span class="s2">&#34;series&#34;</span>
+
+<span class="p">[</span><span class="nx">mediaTypes</span><span class="p">]</span>
+  <span class="p">[</span><span class="nx">mediaTypes</span><span class="p">.</span><span class="s2">&#34;application/atom+xml&#34;</span><span class="p">]</span>
+    <span class="nx">suffixes</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;xml&#34;</span><span class="p">]</span>
+
+<span class="p">[</span><span class="nx">outputFormats</span><span class="p">]</span>
+  <span class="p">[</span><span class="nx">outputFormats</span><span class="p">.</span><span class="nx">Atom</span><span class="p">]</span>
+    <span class="c"># https://validator.w3.org/feed/docs/atom.html#whatIsAtom</span>
+    <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Atom&#34;</span>
+    <span class="nx">mediaType</span> <span class="p">=</span> <span class="s2">&#34;application/atom+xml&#34;</span>
+    <span class="c"># generated file = &lt;baseName&gt;.&lt;mediaType.&#34;application/atom+xml&#34;.suffixes[0]&gt; = atom.xml</span>
+    <span class="nx">baseName</span> <span class="p">=</span> <span class="s2">&#34;atom&#34;</span>
+    <span class="nx">isPlainText</span> <span class="p">=</span> <span class="kc">false</span>
+    <span class="nx">rel</span> <span class="p">=</span> <span class="s2">&#34;alternate&#34;</span>
+    <span class="nx">isHTML</span> <span class="p">=</span> <span class="kc">false</span>
+    <span class="nx">noUgly</span> <span class="p">=</span> <span class="kc">true</span>
+    <span class="nx">permalinkable</span> <span class="p">=</span> <span class="kc">false</span>
+
+<span class="p">[</span><span class="nx">outputFormats</span><span class="p">.</span><span class="nx">outputs</span><span class="p">]</span>
+  <span class="nx">home</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;HTML&#34;</span><span class="p">,</span> <span class="s2">&#34;ATOM&#34;</span><span class="p">]</span>
+  <span class="nx">page</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;HTML&#34;</span><span class="p">]</span>
+  <span class="nx">section</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;HTML&#34;</span><span class="p">]</span>
+  <span class="nx">taxonomy</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;HTML&#34;</span><span class="p">]</span>
+  <span class="nx">term</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;HTML&#34;</span><span class="p">,</span> <span class="s2">&#34;ATOM&#34;</span><span class="p">]</span></code></pre></div></p>
+</li>
+<li>
+<p>目前在website-hugo\content\裡面還沒有任何內容，我們可以下載 <a href="https://github.com/gohugoio/hugoBasicExample">HugoBasicExample</a> 來進行測試，將HugoBasicExample/content/覆蓋到website-hugo/content/</p>
+</li>
+<li>
+<p>進行測試，在website-hugo內執行</p>
+<blockquote>
+<p>hugo server -D</p>
+</blockquote>
+</li>
+<li>
+<p>在瀏覽器裡面輸入下列網址</p>
+<blockquote>
+<p>http://localhost:1313</p>
+</blockquote>
+<p>就可以看到你建立的網頁</p>
+</li>
+</ol>
+<div class="gblog-post__anchorwrap"><h2 id="push-to-github">Push to Github<a data-clipboard-text="http://yen429.github.org/post/hugo-github-guide/#push-to-github" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor Push to Github" href="#push-to-github"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
+<p>接下來我們要將我們的網站Push到Github上</p>
+<ol>
+<li>你必須先申請一個Github帳號，這個部份我就不說明</li>
+<li>下載 <a href="https://git-scm.com/">Git Cliet</a> 並安裝</li>
+<li>建立xxx.github.io的repo，xxx是你在Github的帳號</li>
+<li>執行在websit-hugo下，執行下列command，產生public/資料夾
+<blockquote>
+<p>hugo</p>
+</blockquote>
+</li>
+<li>將public push到你的Github上
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">cd</span> public
+git init
+git remote add origin https://github.com/xxx/xxx.github.io.git
+git add .
+git commit -m <span class="s2">&#34;Initial commit&#34;</span>
+git push -u origin master</code></pre></div></li>
+</ol>
+<div class="gblog-post__anchorwrap"><h2 id="post-new-page">Post new page<a data-clipboard-text="http://yen429.github.org/post/hugo-github-guide/#post-new-page" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor Post new page" href="#post-new-page"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
+<div class="gblog-post__anchorwrap"><h2 id="參考文件">參考文件<a data-clipboard-text="http://yen429.github.org/post/hugo-github-guide/#參考文件" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor 參考文件" href="#參考文件"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
 
         </section>
     </article>
