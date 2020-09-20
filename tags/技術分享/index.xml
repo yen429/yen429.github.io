@@ -13,7 +13,7 @@
       <pubDate>Sun, 20 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>http://yen429.github.org/post/hugo-github-guide/</guid>
-      <description>&lt;p&gt;這個網站是使用HUGO生成的靜態網頁，並搭配Geekblog的佈景主題，最後再架設到Github上，過程其實很簡單，我的第一篇文章就來記錄這整個過程吧！&lt;/p&gt;</description>
+      <description>&lt;p&gt;這個網站是使用HUGO生成的靜態網頁，並搭配Geekblog的佈景主題，最後再發布到Github上，過程其實很簡單，這篇文章就來記錄這整個過程吧！&lt;/p&gt;</description>
     </item>
     
   </channel>
