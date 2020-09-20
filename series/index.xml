@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Series on Ken Site</title>
-    <link>http://yen429.github.org/series/</link>
+    <link>http://yen429.github.io/series/</link>
     <description>Recent content in Series on Ken Site</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-TW</language><atom:link href="http://yen429.github.org/series/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-TW</language><atom:link href="http://yen429.github.io/series/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

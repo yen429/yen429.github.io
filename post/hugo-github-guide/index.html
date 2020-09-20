@@ -33,7 +33,7 @@
     <meta property="og:title" content="HUGO &#43; Github 安裝教學" />
 <meta property="og:description" content="Guide to emoji usage in Hugo" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://yen429.github.org/post/hugo-github-guide/" />
+<meta property="og:url" content="http://yen429.github.io/post/hugo-github-guide/" />
 <meta property="article:published_time" content="2020-09-20T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-09-20T00:00:00+00:00" />
 
@@ -67,7 +67,7 @@
     "isFamilyFriendly": "true",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "http:\/\/yen429.github.org\/post\/hugo-github-guide\/"
+        "@id": "http:\/\/yen429.github.io\/post\/hugo-github-guide\/"
     },
     "author" : [
     ],
@@ -79,15 +79,15 @@
     "publisher":{
         "@type":"Organization",
         "name": "Ken Site",
-        "url": "http://yen429.github.org/",
+        "url": "http://yen429.github.io/",
         "logo": {
             "@type": "ImageObject",
-            "url": "http:\/\/yen429.github.org\/brand.svg",
+            "url": "http:\/\/yen429.github.io\/brand.svg",
             "width":"32",
             "height":"32"
         }
     },
-    "url" : "http:\/\/yen429.github.org\/post\/hugo-github-guide\/",
+    "url" : "http:\/\/yen429.github.io\/post\/hugo-github-guide\/",
     "wordCount" : "240",
     "genre" : [ "技術分享" ]
 }
@@ -102,7 +102,7 @@
     <div class="wrapper">
         <header class="gblog-header">
     <div class="container flex align-center justify-center">
-        <a class="gblog-header__link" rel="me" href="http://yen429.github.org/">
+        <a class="gblog-header__link" rel="me" href="http://yen429.github.io/">
             <span class="gblog-brand flex align-center justify-center">
                 <img class="gblog-brand__img" title="Branding of Ken Site" src="/brand.svg" alt="Ken Site" width=60 height=60>
                 Ken Site
@@ -154,7 +154,7 @@
 
 <p>這個網站是使用HUGO生成的靜態網頁，並搭配Geekblog的佈景主題，最後再發布到Github上，過程其實很簡單，這篇文章就來記錄這整個過程吧！</p>
 <p>這篇教學主要是以Windows為主，其他作業系統的安裝流程會不太一樣，不過都可以從網路上找到相關的說明。</p>
-<div class="gblog-post__anchorwrap"><h2 id="install-chocolatey">Install Chocolatey<a data-clipboard-text="http://yen429.github.org/post/hugo-github-guide/#install-chocolatey" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor Install Chocolatey" href="#install-chocolatey"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
+<div class="gblog-post__anchorwrap"><h2 id="install-chocolatey">Install Chocolatey<a data-clipboard-text="http://yen429.github.io/post/hugo-github-guide/#install-chocolatey" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor Install Chocolatey" href="#install-chocolatey"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
 <p>在Hugo網站上針對Windows提供Chocolatey和Scoop這兩種套件管理程式來安裝，我主要採用的Chocolatey：</p>
 <ol>
 <li>可以參考 <a href="https://chocolatey.org/install">Chocolatey</a> 的安裝說明</li>
@@ -167,7 +167,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force<span class="p">;</span> <span c
 <li>出現下列訊息表示安裝成功
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">Chocolatey v0.10.15</code></pre></div></li>
 </ol>
-<div class="gblog-post__anchorwrap"><h2 id="install-hugo">Install Hugo<a data-clipboard-text="http://yen429.github.org/post/hugo-github-guide/#install-hugo" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor Install Hugo" href="#install-hugo"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
+<div class="gblog-post__anchorwrap"><h2 id="install-hugo">Install Hugo<a data-clipboard-text="http://yen429.github.io/post/hugo-github-guide/#install-hugo" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor Install Hugo" href="#install-hugo"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
 <p>安裝好Chocolatey後，要再安裝Hugo就簡單很多：</p>
 <ol>
 <li>執行下列Command來安裝Hugo
@@ -175,7 +175,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force<span class="p">;</span> <span c
 <li>安裝完成後，便可利用Hugo來建立網站
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">hugo new site website-hugo</code></pre></div></li>
 </ol>
-<div class="gblog-post__anchorwrap"><h2 id="install-geekblog-theme">Install Geekblog Theme<a data-clipboard-text="http://yen429.github.org/post/hugo-github-guide/#install-geekblog-theme" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor Install Geekblog Theme" href="#install-geekblog-theme"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
+<div class="gblog-post__anchorwrap"><h2 id="install-geekblog-theme">Install Geekblog Theme<a data-clipboard-text="http://yen429.github.io/post/hugo-github-guide/#install-geekblog-theme" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor Install Geekblog Theme" href="#install-geekblog-theme"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
 <p>建立好Hugo網站後，接下來就是要套用Theme，我選擇的是Geekblog：</p>
 <ol>
 <li>下載 <a href="https://hugo-geekblog.geekdocs.de/posts/getting-started/#option-1-download-pre-build-release-bundle">Greekbolg pre-build release bundle</a></li>
@@ -233,7 +233,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force<span class="p">;</span> <span c
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">http://localhost:1313</code></pre></div>
 就可以看到你建立的網頁</li>
 </ol>
-<div class="gblog-post__anchorwrap"><h2 id="push-to-github">Push to Github<a data-clipboard-text="http://yen429.github.org/post/hugo-github-guide/#push-to-github" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor Push to Github" href="#push-to-github"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
+<div class="gblog-post__anchorwrap"><h2 id="push-to-github">Push to Github<a data-clipboard-text="http://yen429.github.io/post/hugo-github-guide/#push-to-github" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor Push to Github" href="#push-to-github"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
 <p>接下來我們要將我們的網站Push到Github上</p>
 <ol>
 <li>你必須先申請一個Github帳號，這個部份我就不多做說明</li>
@@ -251,7 +251,7 @@ git push -u origin master</code></pre></div></li>
 <li>最後你就可以在瀏覽器上直接瀏覽你在Github建立的網站
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">https://xxx.githut.io</code></pre></div></li>
 </ol>
-<div class="gblog-post__anchorwrap"><h2 id="post-new-page">Post New Page<a data-clipboard-text="http://yen429.github.org/post/hugo-github-guide/#post-new-page" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor Post New Page" href="#post-new-page"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
+<div class="gblog-post__anchorwrap"><h2 id="post-new-page">Post New Page<a data-clipboard-text="http://yen429.github.io/post/hugo-github-guide/#post-new-page" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor Post New Page" href="#post-new-page"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
 <ol>
 <li>新增一個page
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">hugo new post/my-new-post.md</code></pre></div></li>
@@ -265,7 +265,7 @@ git add .
 git commit -m <span class="s2">&#34;Initial commit&#34;</span>
 git push origin master</code></pre></div></li>
 </ol>
-<div class="gblog-post__anchorwrap"><h2 id="reference">Reference<a data-clipboard-text="http://yen429.github.org/post/hugo-github-guide/#reference" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor Reference" href="#reference"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
+<div class="gblog-post__anchorwrap"><h2 id="reference">Reference<a data-clipboard-text="http://yen429.github.io/post/hugo-github-guide/#reference" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor Reference" href="#reference"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
 <ol>
 <li><a href="https://medium.com/@chswei/%E5%9C%A8-github-%E9%83%A8%E7%BD%B2-hugo-%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99-9c40682dfe40">在GitHub部署Hugo靜態網站</a></li>
 <li><a href="https://medium.com/@jerrywu_3165/%E9%81%8B%E7%94%A8github-hugo%E5%85%8D%E8%B2%BB%E9%83%A8%E5%B1%AC%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99-b92013c25956">運用Github+Hugo免費部署靜態網站</a></li>
