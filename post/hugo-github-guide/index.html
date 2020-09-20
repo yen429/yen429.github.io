@@ -88,7 +88,7 @@
         }
     },
     "url" : "http:\/\/yen429.github.org\/post\/hugo-github-guide\/",
-    "wordCount" : "213",
+    "wordCount" : "240",
     "genre" : [ "技術分享" ]
 }
 </script>
@@ -239,7 +239,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force<span class="p">;</span> <span c
 <li>你必須先申請一個Github帳號，這個部份我就不多做說明</li>
 <li>下載Windows版本的 <a href="https://git-scm.com/">Git</a> 並安裝</li>
 <li>在Github內建立xxx.github.io的repo，xxx是你在Github的帳號</li>
-<li>執行在websit-hugo下，執行下列command，產生public/資料夾
+<li>在websit-hugo下，執行下列command，產生public/資料夾
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">hugo</code></pre></div></li>
 <li>將public push到你的Github上
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">cd</span> public
@@ -251,10 +251,25 @@ git push -u origin master</code></pre></div></li>
 <li>最後你就可以在瀏覽器上直接瀏覽你在Github建立的網站
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">https://xxx.githut.io</code></pre></div></li>
 </ol>
-<div class="gblog-post__anchorwrap"><h2 id="post-new-page">Post new page<a data-clipboard-text="http://yen429.github.org/post/hugo-github-guide/#post-new-page" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor Post new page" href="#post-new-page"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
-<p>TBD</p>
-<div class="gblog-post__anchorwrap"><h2 id="參考文件">參考文件<a data-clipboard-text="http://yen429.github.org/post/hugo-github-guide/#參考文件" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor 參考文件" href="#參考文件"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
-<p>TDB</p>
+<div class="gblog-post__anchorwrap"><h2 id="post-new-page">Post New Page<a data-clipboard-text="http://yen429.github.org/post/hugo-github-guide/#post-new-page" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor Post New Page" href="#post-new-page"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
+<ol>
+<li>新增一個page
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">hugo new post/my-new-post.md</code></pre></div></li>
+<li>用文字編輯器編譯post/my-new-post.md檔案</li>
+<li>可以透過hugo server來檢查頁面是否有問題</li>
+<li>在websit-hugo下，重新產生public
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">hugo</code></pre></div></li>
+<li>將更新的public push 到 Github
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">cd</span> public
+git add .
+git commit -m <span class="s2">&#34;Initial commit&#34;</span>
+git push origin master</code></pre></div></li>
+</ol>
+<div class="gblog-post__anchorwrap"><h2 id="reference">Reference<a data-clipboard-text="http://yen429.github.org/post/hugo-github-guide/#reference" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor Reference" href="#reference"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
+<ol>
+<li><a href="https://medium.com/@chswei/%E5%9C%A8-github-%E9%83%A8%E7%BD%B2-hugo-%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99-9c40682dfe40">在GitHub部署Hugo靜態網站</a></li>
+<li><a href="https://medium.com/@jerrywu_3165/%E9%81%8B%E7%94%A8github-hugo%E5%85%8D%E8%B2%BB%E9%83%A8%E5%B1%AC%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99-b92013c25956">運用Github+Hugo免費部署靜態網站</a></li>
+</ol>
 
         </section>
     </article>
