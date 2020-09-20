@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tech on Ken Site</title>
+    <title>Tech on Yen&#39;s Blog</title>
     <link>http://yen429.github.io/tags/Tech/</link>
-    <description>Recent content in Tech on Ken Site</description>
+    <description>Recent content in Tech on Yen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
     <lastBuildDate>Sun, 20 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://yen429.github.io/tags/Tech/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>HUGO &#43; Github 安裝教學</title>
+      <title>HUGO &#43; Github 架設指南</title>
       <link>http://yen429.github.io/post/hugo-github-guide/</link>
       <pubDate>Sun, 20 Sep 2020 00:00:00 +0000</pubDate>
       
