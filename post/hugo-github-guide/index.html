@@ -22,7 +22,7 @@
     
 
 
-    <title>HUGO &#43; Github 架設指南 | Yen&#39;s Blog</title>
+    <title>Hugo &#43; Github 架設指南 | Yen&#39;s Blog</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -30,7 +30,7 @@
 
     
 
-    <meta property="og:title" content="HUGO &#43; Github 架設指南" />
+    <meta property="og:title" content="Hugo &#43; Github 架設指南" />
 <meta property="og:description" content="Guide to emoji usage in Hugo" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://yen429.github.io/post/hugo-github-guide/" />
@@ -38,7 +38,7 @@
 <meta property="article:modified_time" content="2020-09-20T00:00:00+00:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="HUGO &#43; Github 架設指南"/>
+<meta name="twitter:title" content="Hugo &#43; Github 架設指南"/>
 <meta name="twitter:description" content="Guide to emoji usage in Hugo"/>
 
 
@@ -59,10 +59,10 @@
     "@context": "http://schema.org",
     "@type": "BlogPosting",
     "articleSection": "post",
-    "name": "HUGO \u002b Github 架設指南",
-    "headline": "HUGO \u002b Github 架設指南",
+    "name": "Hugo \u002b Github 架設指南",
+    "headline": "Hugo \u002b Github 架設指南",
     "alternativeHeadline": "",
-    "description": "\u003cp\u003e這個網站是使用HUGO生成的靜態網頁，並搭配Geekblog的佈景主題，最後再發布到Github上，過程其實很簡單，這篇文章就來記錄這整個過程吧！\u003c\/p\u003e",
+    "description": "\u003cp\u003e這個網站是使用 \u003ca href=\u0022https:\/\/gohugo.io\/\u0022\u003eHugo\u003c\/a\u003e 生成的靜態網頁，並搭配 \u003ca href=\u0022https:\/\/themes.gohugo.io\/hugo-geekblog\/\u0022\u003eGeekblog\u003c\/a\u003e 的佈景主題，最後再發佈到 \u003ca href=\u0022https:\/\/pages.github.com\/\u0022\u003eGithub\u003c\/a\u003e 上，過程其實很簡單，這篇文章就來記錄這整個過程吧！\u003c\/p\u003e",
     "inLanguage": "en",
     "isFamilyFriendly": "true",
     "mainEntityOfPage": {
@@ -88,7 +88,7 @@
         }
     },
     "url" : "http:\/\/yen429.github.io\/post\/hugo-github-guide\/",
-    "wordCount" : "240",
+    "wordCount" : "270",
     "genre" : [ "Tech" ]
 }
 </script>
@@ -148,7 +148,7 @@
             
             
 
-            <h1>HUGO &#43; Github 架設指南</h1>
+            <h1>Hugo &#43; Github 架設指南</h1>
             
         </header>
 
@@ -160,35 +160,40 @@
     
 
 
-<p>這個網站是使用HUGO生成的靜態網頁，並搭配Geekblog的佈景主題，最後再發布到Github上，過程其實很簡單，這篇文章就來記錄這整個過程吧！</p>
+<p>這個網站是使用 <a href="https://gohugo.io/">Hugo</a> 生成的靜態網頁，並搭配 <a href="https://themes.gohugo.io/hugo-geekblog/">Geekblog</a> 的佈景主題，最後再發佈到 <a href="https://pages.github.com/">Github</a> 上，過程其實很簡單，這篇文章就來記錄這整個過程吧！</p>
 <p>這篇教學主要是以Windows為主，其他作業系統的安裝流程會不太一樣，不過都可以從網路上找到相關的說明。</p>
-<div class="gblog-post__anchorwrap"><h2 id="install-chocolatey">Install Chocolatey<a data-clipboard-text="http://yen429.github.io/post/hugo-github-guide/#install-chocolatey" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor Install Chocolatey" href="#install-chocolatey"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
-<p>在Hugo網站上針對Windows提供Chocolatey和Scoop這兩種套件管理程式來安裝，我主要採用的Chocolatey：</p>
+<div class="gblog-post__anchorwrap"><h2 id="安裝chocolatey">安裝Chocolatey<a data-clipboard-text="http://yen429.github.io/post/hugo-github-guide/#安裝chocolatey" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor 安裝Chocolatey" href="#安裝chocolatey"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
+<p>在Hugo網站上針對Windows提供 <a href="https://chocolatey.org/">Chocolatey</a> 和 <a href="https://scoop.sh/">Scoop</a> 這兩種套件管理程式來安裝，我主要採用的Chocolatey。</p>
 <ol>
-<li>可以參考 <a href="https://chocolatey.org/install">Chocolatey</a> 的安裝說明</li>
-<li>在搜尋列上打PowerShell，並以系統管理員身分去執行Window PowerShell</li>
-<li>PowerShell裡面去執行下面command
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">   
-Set-ExecutionPolicy Bypass -Scope Process -Force<span class="p">;</span> <span class="o">[</span>System.Net.ServicePointManager<span class="o">]</span>::SecurityProtocol <span class="o">=</span> <span class="o">[</span>System.Net.ServicePointManager<span class="o">]</span>::SecurityProtocol -bor 3072<span class="p">;</span> iex <span class="o">((</span>New-Object System.Net.WebClient<span class="o">)</span>.DownloadString<span class="o">(</span><span class="s1">&#39;https://chocolatey.org/install.ps1&#39;</span><span class="o">))</span></code></pre></div></li>
-<li>等待一段時間後，如沒有出現錯誤訊息，執行下列commad確認是否安裝成功
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">choco</code></pre></div></li>
-<li>出現下列訊息表示安裝成功
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">Chocolatey v0.10.15</code></pre></div></li>
+<li>可以參考 <a href="https://chocolatey.org/install">Chocolatey</a> 的安裝說明。</li>
+<li>在Windows的搜尋列上打PowerShell，並以系統管理員身分去執行Window PowerShell，<a href="https://docs.microsoft.com/zh-tw/powershell/?view=powershell-7">PowerShell</a> 是Window提供的加強版的命令提示字元。</li>
+<li>PowerShell裡面去執行下面Cmmand：
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">Set-ExecutionPolicy Bypass -Scope Process -Force<span class="p">;</span> <span class="o">[</span>System.Net.ServicePointManager<span class="o">]</span>::SecurityProtocol <span class="o">=</span> <span class="o">[</span>System.Net.ServicePointManager<span class="o">]</span>::SecurityProtocol -bor 3072<span class="p">;</span> iex <span class="o">((</span>New-Object System.Net.WebClient<span class="o">)</span>.DownloadString<span class="o">(</span><span class="s1">&#39;https://chocolatey.org/install.ps1&#39;</span><span class="o">))</span></code></pre></div></li>
+<li>等待一段時間後，如沒有出現錯誤訊息，執行下列Commad確認是否安裝成功：
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">choco</code></pre></div>
+出現下列訊息表示安裝成功，版號可能會不同：
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">Chocolatey v0.10.15
+Please run <span class="s1">&#39;choco -?&#39;</span> or <span class="s1">&#39;choco &lt;command&gt; -?&#39;</span> <span class="k">for</span> <span class="nb">help</span> menu.</code></pre></div></li>
 </ol>
-<div class="gblog-post__anchorwrap"><h2 id="install-hugo">Install Hugo<a data-clipboard-text="http://yen429.github.io/post/hugo-github-guide/#install-hugo" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor Install Hugo" href="#install-hugo"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
-<p>安裝好Chocolatey後，要再安裝Hugo就簡單很多：</p>
+<div class="gblog-post__anchorwrap"><h2 id="安裝hugo">安裝Hugo<a data-clipboard-text="http://yen429.github.io/post/hugo-github-guide/#安裝hugo" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor 安裝Hugo" href="#安裝hugo"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
+<p>安裝好Chocolatey後，要再安裝Hugo就簡單很多。</p>
 <ol>
-<li>執行下列Command來安裝Hugo
+<li>執行下列Command來安裝Hugo：
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">choco install hugo -confirm</code></pre></div></li>
-<li>安裝完成後，便可利用Hugo來建立網站
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">hugo new site website-hugo</code></pre></div></li>
+<li>安裝完成後，測試一下是否安裝成功：
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">hugo version</code></pre></div>
+出現下列訊息表示安裝成功，版號和日期可能會不同：
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">Hugo Static Site Generator v0.75.1-A4A7BAB7 windows/amd64 BuildDate: 2020-09-15T06:48:58Z</code></pre></div></li>
+<li>接著便可利用Hugo來建立網站：
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">hugo new site website-hugo</code></pre></div>
+執行完後會在目錄內產生websit-hugo/資料夾。</li>
 </ol>
-<div class="gblog-post__anchorwrap"><h2 id="install-geekblog-theme">Install Geekblog Theme<a data-clipboard-text="http://yen429.github.io/post/hugo-github-guide/#install-geekblog-theme" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor Install Geekblog Theme" href="#install-geekblog-theme"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
-<p>建立好Hugo網站後，接下來就是要套用Theme，我選擇的是Geekblog：</p>
+<div class="gblog-post__anchorwrap"><h2 id="安裝geekblog-theme">安裝Geekblog Theme<a data-clipboard-text="http://yen429.github.io/post/hugo-github-guide/#安裝geekblog-theme" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor 安裝Geekblog Theme" href="#安裝geekblog-theme"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
+<p>建立好Hugo網站後，接下來就是要套用Theme，我選擇的是Geekblog。</p>
 <ol>
-<li>下載 <a href="https://hugo-geekblog.geekdocs.de/posts/getting-started/#option-1-download-pre-build-release-bundle">Greekbolg pre-build release bundle</a></li>
-<li>解壓縮後將layouts/和static/這兩個資料夾覆蓋到hugo所產生的website-hugo/資料夾內</li>
-<li>修改website-hugo/config.toml
+<li>下載 <a href="https://hugo-geekblog.geekdocs.de/posts/getting-started/#option-1-download-pre-build-release-bundle">Greekbolg pre-build release bundle</a> 。</li>
+<li>解壓縮後將layouts/和static/這兩個資料夾覆蓋到hugo所產生的website-hugo/資料夾內。</li>
+<li>修改website-hugo/config.toml：
 <div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">baseURL</span> <span class="p">=</span> <span class="s2">&#34;http://localhost&#34;</span>
 <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;Geekblog&#34;</span>
 <span class="nx">theme</span> <span class="p">=</span> <span class="s2">&#34;hugo-geekblog&#34;</span>
@@ -234,46 +239,48 @@ Set-ExecutionPolicy Bypass -Scope Process -Force<span class="p">;</span> <span c
   <span class="nx">section</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;HTML&#34;</span><span class="p">]</span>
   <span class="nx">taxonomy</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;HTML&#34;</span><span class="p">]</span>
   <span class="nx">term</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;HTML&#34;</span><span class="p">,</span> <span class="s2">&#34;ATOM&#34;</span><span class="p">]</span></code></pre></div></li>
-<li>目前在website-hugo/content/裡面還沒有任何內容，我們可以下載 <a href="https://github.com/gohugoio/hugoBasicExample">HugoBasicExample</a> 來進行測試，將HugoBasicExample/content/覆蓋到website-hugo/content/</li>
-<li>進行測試，在website-hugo內執行
+<li>目前在website-hugo/content/裡面還沒有任何內容，我們可以下載 <a href="https://github.com/gohugoio/hugoBasicExample">HugoBasicExample</a> 來進行測試，將HugoBasicExample/content/覆蓋到website-hugo/content/。</li>
+<li>進行測試，在website-hugo內執行：
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">hugo server -D</code></pre></div></li>
-<li>在瀏覽器裡面輸入下列網址
+<li>在瀏覽器裡面輸入下列網址：
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">http://localhost:1313</code></pre></div>
-就可以看到你建立的網頁</li>
+就可以看到你建立的網頁。</li>
 </ol>
-<div class="gblog-post__anchorwrap"><h2 id="push-to-github">Push to Github<a data-clipboard-text="http://yen429.github.io/post/hugo-github-guide/#push-to-github" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor Push to Github" href="#push-to-github"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
-<p>接下來我們要將我們的網站Push到Github上</p>
+<div class="gblog-post__anchorwrap"><h2 id="發佈到github">發佈到Github<a data-clipboard-text="http://yen429.github.io/post/hugo-github-guide/#發佈到github" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor 發佈到Github" href="#發佈到github"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
+<p>接下來我們要將我們的網站Push到Github上。</p>
 <ol>
-<li>你必須先申請一個Github帳號，這個部份我就不多做說明</li>
-<li>下載Windows版本的 <a href="https://git-scm.com/">Git</a> 並安裝</li>
-<li>在Github內建立xxx.github.io的repo，xxx是你在Github的帳號</li>
-<li>在websit-hugo下，執行下列command，產生public/資料夾
+<li>你必須先申請一個Github帳號，這個部份我就不多做說明，下面我假設你建立的帳號名稱是xxx。</li>
+<li>下載Windows版本的 <a href="https://git-scm.com/">Git</a> 並安裝。</li>
+<li>在Github內建立xxx.github.io的repo，xxx是你在Github的帳號。</li>
+<li>在websit-hugo/下，執行下列Command，會自動產生public/資料夾：
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">hugo</code></pre></div></li>
-<li>將public push到你的Github上
+<li>將public/內的檔案push到你的Github上：
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">cd</span> public
 git init
 git remote add origin https://github.com/xxx/xxx.github.io.git
 git add .
 git commit -m <span class="s2">&#34;Initial commit&#34;</span>
-git push -u origin master</code></pre></div></li>
-<li>最後你就可以在瀏覽器上直接瀏覽你在Github建立的網站
+git push -u origin master</code></pre></div>
+這個步驟能將public/資料夾加入git的版本控制並上傳至Github，後面的建立新頁面也會更新此資料夾的內容。</li>
+<li>最後你就可以在瀏覽器上直接瀏覽你在Github發佈的網站：
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">https://xxx.githut.io</code></pre></div></li>
 </ol>
-<div class="gblog-post__anchorwrap"><h2 id="post-new-page">Post New Page<a data-clipboard-text="http://yen429.github.io/post/hugo-github-guide/#post-new-page" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor Post New Page" href="#post-new-page"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
+<div class="gblog-post__anchorwrap"><h2 id="建立新頁面">建立新頁面<a data-clipboard-text="http://yen429.github.io/post/hugo-github-guide/#建立新頁面" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor 建立新頁面" href="#建立新頁面"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
 <ol>
-<li>新增一個page
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">hugo new post/my-new-post.md</code></pre></div></li>
-<li>用文字編輯器編譯post/my-new-post.md檔案</li>
-<li>可以透過hugo server來檢查頁面是否有問題</li>
-<li>在websit-hugo下，重新產生public
+<li>利用Hugo來新增一個頁面：
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">hugo new post/my-new-post.md</code></pre></div>
+會在hugo-website/post/產生my-new-post.md。</li>
+<li>用文字編輯器編譯post/my-new-post.md檔案，這個部份我還在摸索有沒有方便的方式，用文字編輯器寫Markdown我覺得有點麻煩。</li>
+<li>可以透過hugo server來檢查頁面是否有問題。</li>
+<li>在websit-hugo/下，重新產生public/：
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">hugo</code></pre></div></li>
-<li>將更新的public push 到 Github
+<li>將更新的public push 到 Github：
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">cd</span> public
 git add .
 git commit -m <span class="s2">&#34;Initial commit&#34;</span>
 git push origin master</code></pre></div></li>
 </ol>
-<div class="gblog-post__anchorwrap"><h2 id="reference">Reference<a data-clipboard-text="http://yen429.github.io/post/hugo-github-guide/#reference" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor Reference" href="#reference"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
+<div class="gblog-post__anchorwrap"><h2 id="參考資料">參考資料<a data-clipboard-text="http://yen429.github.io/post/hugo-github-guide/#參考資料" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor 參考資料" href="#參考資料"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
 <ol>
 <li><a href="https://medium.com/@chswei/%E5%9C%A8-github-%E9%83%A8%E7%BD%B2-hugo-%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99-9c40682dfe40">在GitHub部署Hugo靜態網站</a></li>
 <li><a href="https://medium.com/@jerrywu_3165/%E9%81%8B%E7%94%A8github-hugo%E5%85%8D%E8%B2%BB%E9%83%A8%E5%B1%AC%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99-b92013c25956">運用Github+Hugo免費部署靜態網站</a></li>
